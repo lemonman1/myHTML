@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我爱我的祖国</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #big{
+            width: 1920px;
+            height: 1080px;
+            background: url("img/1.jpg") no-repeat;
+        }
+        #text{
+            font-size: 70px;
+            width: 1155px;
+            margin-left: 418px;
+            height: 200px;
+            line-height: 200px;
+            color: yellow;
+            text-align: center;
+            padding-top: 50px;
+        }
+        #year{
+            font-size: 100px;
+            color: red;
+            width: 500px;
+            height: 200px;
+            text-align: center;
+            margin-left: 700px;
+        }
+        #music
+       
+    </style>
+</head>
+<body>
+   <div id="big">
+       <audio src="mp3/我和我的祖国.mp3" autoplay="autoplay" loop="loop" id="music"></audio>
+       <div id="text" align="center">热烈庆祝中华人民共和国成立 <span id="s">70</span>周年</div>
+       <div id="year">1949</div>
+
+   </div>
+   <script>
+       function toggleSound() {
+           var music = document.getElementById("music");//获取ID  
+           console.log(music);
+           console.log(music.paused);
+           if (music.paused) { //判断是否播放  
+               music.paused=false;
+               music.play(); //没有就播放 
+           }else{
+               clearInterval(timer2);
+           }
+
+       }
+       var timer2 = setInterval("toggleSound()",1);
+       var str = "热烈庆祝中华人民共和国成立70周年";
+       var font = new Array("Georgia","Arial","Kartika","Berlin Sans FB Demi","Consolas","EucrosiaUPC")
+       var cn = 1;
+       var f = 0;
+       function gettext() {
+           ci = str.substring(0,cn++)
+           document.getElementById("text").innerText = ci;
+       }
+       var years = 1949;
+       function year() {
+           document.getElementById("year").innerText = years++
+           document.getElementById("year").style.fontFamily = font[Math.floor(Math.random()*font.length)];
+           document.getElementById("year").style.fontSize = Math.floor(Math.random()*40+100) + "px";
+       }
+       var timer;
+       function start() {
+           if (cn ==str.length+1){
+               cn=1;
+           }
+           if (years == 2020 ){
+               years = 1949
+               //clearInterval(timer);
+           }
+           console.log(years);
+           year();
+           gettext();
+
+       }
+       timer = setInterval(start,250);
+       
+   </script>
+</body>
+</html>
