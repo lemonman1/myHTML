@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/login.js"></script>
+
+</head>
+<body>
+<div id="big">
+    <div id="logo"></div>
+    <form action="">
+        <div id="login" onmouseout="displayLogin()" onmouseover="showLogin()">
+            <div id="login-title">泽林新会员注册</div>
+            <div>
+                <input type="text" id="user-name" class="textborder" placeholder="请输入用户名" ONBLUR="checkUname()">
+            </div><span id="user-name-erro"></span>
+            <div>
+                <input type="password" id="password" class="textborder" placeholder="请输入密码" ONBLUR="checkPwd()">
+            </div><span id="password-erro"></span>
+            <div>
+                <input type="password" id="againpassword" class="textborder" placeholder="请再次输入密码" ONBLUR="checkAgainPwd()">
+            </div><span id="againpassword-erro"></span>
+            <div>
+                <input type="text" id="name" class="textborder" placeholder="请输入昵称" ONBLUR="checkname()">
+            </div>
+            <span id="name-erro"></span>
+            <div style="width: auto;font-size: 16px">性别 &nbsp;
+                <select name="sex" id="sex" class="select">
+                    <option value="1">男</option>
+                    <option value="0">女</option>
+                </select>
+                年龄 &nbsp;<input type="text" id="age" class="textborder" style="width: 66px" ONBLUR="checkAge()">
+            </div><span id="age-erro"></span>
+            <div>
+                <input type="text" id="telenumber" class="textborder" placeholder="请输入手机号" ONBLUR="checkPhone()">
+            </div><span id="telenumber-erro"></span>
+            <div>
+                <input type="text" id="email" class="textborder" placeholder="请输入邮箱" onblur="checkEmail()">
+            </div><span id="email-erro"></span>
+            <div>
+                秀出你的爱好 <br>
+                <input type="checkbox" id="all" name="hobbies" onclick="selectAll()">全选
+                <input type="checkbox" id="c1"  name="hobbies">唱
+                <input type="checkbox" id="c2"  name="hobbies">跳
+                <input type="checkbox" id="c3"  name="hobbies">Rap
+                <input type="checkbox" id="c4"  name="hobbies">篮球
+            </div><span id="hobbyes-erro"></span>
+            <div>
+                <button type="button" id="loginButton" onclick="LoginButton()">立即注册</button>
+            </div>
+        </div>
+    </form>
+
+</div>
+
+
+</body>
+</html>

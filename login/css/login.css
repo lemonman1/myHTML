@@ -1,0 +1,85 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+#big{
+    width: 1920px;
+    height: 1000px;
+    background: url("../img/logo_bg.jpg") no-repeat;
+}
+#logo{
+    width: 500px;
+    height: 150px;
+    margin: 0 auto;
+    background: url("../img/logowz.png") no-repeat;
+}
+#login{
+    filter:alpha(opacity=50);
+    opacity: 0.6;
+    width: auto;
+    height: auto;
+    margin-right: 137px;
+    margin-left: 70%;
+    background: white;
+    text-align: center;
+
+}
+.textborder{
+    margin-top: 10px;
+    border: 1px #aaa solid;
+    border-radius: 4px;
+    background: 0 0;
+    text-align: left;
+    font-size: 16px;
+    width: 222px;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 20px;
+}
+#login-title{
+    font-size: 25px;
+    text-align: center;
+    color: #FF7F50;
+    padding: 15px 0;
+    width: 300px;
+    margin: 0 auto;
+    border-bottom: solid 1px #CCCCCC;
+}
+#loginButton{
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    padding-left: 0;
+    width: 170px;
+    height: 42px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    background: #ff366f;
+    color: #fff;
+    line-height: 42px;
+
+}
+.select{
+    width: 60px;
+    height: 38px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+#login>span{
+    color: red;
+    text-align: left;
+    font-size: 10px;
+}
+.check{
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 1px solid #c9c9c9;
+    border-radius: 2px;
+    outline: none;
+}
+
+
